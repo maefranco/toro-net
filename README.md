@@ -60,7 +60,7 @@ Open http://localhost:3000 in any web browser.
 # Midterm Contribution
 
 ## The milestone diagram
-The [milestone](https://github.com/RauKevin/csc583-midterm/images/milestone.jpeg) diagram.
+The [milestone](./images/milestone.jpeg) diagram.
 
 
 
