@@ -54,3 +54,13 @@ Run the backend using nodemon
 ```
 
 Open http://localhost:3000 in any web browser.
+
+
+*********************************************************************************************************************************
+#Midterm Contribution
+
+##The milestone diagram
+[a link](https://github.com/RauKevin/csc583-midterm/images/milestone.jpeg)
+
+
+
