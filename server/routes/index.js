@@ -3,7 +3,8 @@ const express = require('express'),
       path = require('path')
 
 router.get('/isauth', (req, res, next) => {
-  res.send(req.user)
+  res.send(req.user);
+  console.log(req.body);
 })
 
 router.get('/logout', (req, res, next) => {
