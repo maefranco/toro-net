@@ -1,6 +1,13 @@
 <template>
   <div class="container">
     <form action="/auth/local" method="post">
+      <div class ="">
+          <h2> Log In! </h2>
+      </div>
+      <hr>
+      <br>
+      <br>
+
       <div class="form-group">
         <input class="form-control" type="email" name="email" placeholder="Email" v-model="email">
         </div>

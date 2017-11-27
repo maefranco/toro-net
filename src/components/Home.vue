@@ -2,71 +2,74 @@
   <div class="container" v-if="this.$store.state.user.displayName">
     <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4>
     <br>
-    <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-sm-7" >
     <div class="form-group">
       <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
     </div>
     <div class="form-group">
+
+
       <textarea class="form-control" id="body" rows="5" placeholder="Write your thoughts here..." v-model="body">
       </textarea>
+
+
+
     </div>
     <button class="btn btn-primary" @click="addPost()">Post!</button>
     <hr>
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">
-    <div class="container-fluid container-scroll">
-  <div class="row columns">
-    <div class="col-md-2">Field 1</div>
-    <div class="col-md-2">Field 2</div>
-    <div class="col-md-2">Field 3</div>
-    <div class="col-md-2">Field 4</div>
-  </div>
-</div>
-
-<div class="container-fluid container-scroll">
-  <div class="row columns">
-    <div class="col-md-2">Field 1</div>
-    <div class="col-md-2">Field 2</div>
-    <div class="col-md-2">Field 3</div>
-    <div class="col-md-2">Field 4</div>
-  </div>
-</div>
-
-<div class="container-fluid container-scroll">
-  <div class="row">
-    <div class="col-md-2">Field 1</div>
-    <div class="col-md-2">Field 2</div>
-    <div class="col-md-2">Field 3</div>
-    <div class="col-md-2">Field 4</div>
-  </div>
-</div>
-    </div>
-</div>
-  <div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-7" >
-  <div class="form-group">
-    <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
-  </div>
-  <div class="form-group">
-    <textarea class="form-control" id="body" rows="5" placeholder="Write your thoughts here..." v-model="body">
-    </textarea>
-  </div>
-  <button class="btn btn-primary" @click="addPost()">Post!</button>
-  <hr>
   </div>
 
-  <div class="col-sm-3"></div>
-</div>
-  </div>
+
+
+  document.querySelector('button').addEventListener('click', function() {
+  document.querySelector('#content').style.height= 'auto';
+  this.style.display= 'none';
+});
+
+body {
+  font: 14px verdana;
+}
+
+#content {
+  overflow: hidden;
+  height: 3.6em;
+  line-height: 1.2em;
+  width: 200px;
+}
+
+<div id="content">
+This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
+<button>Read more</button>
+
+
 
   <div class="container" v-else>
-    <h4>You must login to access Toro-Net!</h4> //changes made here
+    <!-- <h4>
+                    <h1>WHAT IS GOING ON? </h1>
+    </h4> -->
+    <!-- navbar loaded -->
+      <nav-bar> </nav-bar>
+
+      <!--Home page content loaded  -->
+      <hp-content> </hp-content>
+
+      <hr>
+
+      <!-- footer loaded  -->
+      <footer-area> </footer-area>
+
   </div>
 </template>
+
+<style>
+ .info_section{
+
+    width: 600;
+    height: 400;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+ }
+</style>
 
 <script>
 export default {
@@ -96,29 +99,3 @@ export default {
   },
 }
 </script>
-
-<style>
-@media (min-width: 992px) {
-  .container-scroll {
-    overflow-x: auto;
-  }
-  .container-scroll .columns-16 {
-    width: 133.33333333vw;  /* = 100vw * 16/12 */
-  }
-  .container-scroll .columns-24 {
-    width: 200vw;  /* = 100vw * 24/12 */
-  }
-  .container-scroll .col-md-2 {
-    width: 16.66666667vw !important;
-  }
-}
-
-.container-scroll > .row {
-  margin-top: 24px;
-}
-.container-scroll > .row > .col-md-2 {
-  font-weight: bold;
-  text-align: center;
-}
-
-</style>
