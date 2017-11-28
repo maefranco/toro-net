@@ -13,7 +13,20 @@
     <hr>
   </div>
   <div class="container" v-else>
-    <span class= "info_section">You must login to access Toro-Net!</span>
+    <!-- <h4>
+                    <h1>WHAT IS GOING ON? </h1>
+    </h4> -->
+    <!-- navbar loaded -->
+      <nav-bar> </nav-bar>
+
+      <!--Home page content loaded  -->
+      <hp-content> </hp-content>
+
+      <hr>
+
+      <!-- footer loaded  -->
+      <footer-area> </footer-area>
+
   </div>
 </template>
 

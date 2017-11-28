@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
 <style>
 
 body {
@@ -96,17 +100,17 @@ div #sBar{
         <li><div style="margin: auto; display: block;background-color: transparent;"><img src="logo.jpg" alt="{ToRoNeT}" style="width:50px;height:50px;"></div></li>
         <li><div id="sBar"> <input type="text" name="search" placeholder="Search.."> </div></li>
         <div style="float: right;">
-           
-            <li><a href="#news">[] Notifications</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Profile</a>
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-user" aria-hidden="true" style="font-size:24px"></i></a>
                 <div class="dropdown-content">
                     <a href="#">Friends</a>
                     <a href="#">Link 2</a>
                     <a href="#">Logout</a>
                 </div>
             </li>
-            <li class="dropdown"><a href="javascript:void(0)">Settings</a>
+            <li><a href="#news"><i class="fa fa-globe" aria-hidden="true" style="font-size:24px"></i></a></li>
+            
+            <li class="dropdown"><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true" style="font-size:24px"></i></a>
                 <div class="dropdown-content">
                     <a href="#">Change Stuff</a>
                     <a href="#">?</a>
@@ -132,12 +136,43 @@ Tell us about your wonderful adventures!
 <br>
 <br>
 <br>
-<big> <bold> <font color ="black"> Yourself / ME<br> </fontcolor> </big></bold>
+
+<!-- // this is the code for creating the Modal by Gerardo , version 1.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+<div class="container" style= "margin-left: 0px ; padding-left: 0px">
+<!-- PROTOTYPE add image to modal - NOT WORKING -   <a img src="http://4.bp.blogspot.com/-Kvlhjj4NAxg/TpaqHKTHMTI/AAAAAAAAACE/WgKno8HJEgk/s1600/monopoly_man-13539.jpg" </a>  -->
+   <a href="#" title=" Your Name Goes Here " data-toggle="popover" data-trigger="hover" data-content=" Last Logged in : 11/14/17 - Mutual Friends : 120">
+<big><bold> Yourself / Me </bold></big></a>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+</body>
+</html>
+
+
+<!-- <><><><<><><><>><><><>     COMMENTING OUT THE PREVIOUS STYLE OF NAMES TO SHOW NEW MODAL V.1.0
+<big> <bold> <font color ="black"> Yourself / ME<br> </fontcolor> </big></bold> -->
 <form action="/html/tags/html_form_tag_action.cfm" method="post">
 <textarea name="comments" id="comments" style="width:55%;height:150px;padding:2%;font-size:1.2em;background:url('http://www.oneequalworld.com/wp-content/uploads/2017/02/shutterstock_201120113.jpg');">
-Enter your comments here...
-
-...and watch your comment box grow scrollbars!
+Waiting for the day the DMV does not have lines longer than concession stands at Dodger Stadium.
+"Now calling B-28"..  ugh!
+#NeedAtimeMachinePlz! #SendHelp!
 </textarea>
 <br>
 <input type="submit" value="Delete!">
@@ -146,12 +181,41 @@ Enter your comments here...
 <br>
 <br>
 
-<big> <bold> <font color ="black"> Mario Clark<br> </fontcolor></big></bold>
+<!-- // this is the code for creating the Modal by Gerardo , version 1.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="container" style= "margin-left: 0px ; padding-left: 0px">
+<!-- PROTOTYPE add image to modal - NOT WORKING -   <a img src="http://4.bp.blogspot.com/-Kvlhjj4NAxg/TpaqHKTHMTI/AAAAAAAAACE/WgKno8HJEgk/s1600/monopoly_man-13539.jpg" </a>  -->
+   <a href="#" title=" Mario Clark " data-toggle="popover" data-trigger="hover" data-content=" Last Logged in : 11/14/17 - Mutual Friends : 86 ">
+<big><bold> Mario Clark </bold></big></a>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+</body>
+</html>
+
+
+<!-- <><><><<><><><>><><><>     COMMENTING OUT THE PREVIOUS STYLE OF NAMES TO SHOW NEW MODAL V.1.0
+<big> <bold> <font color ="black"> Mario Clark <br> </fontcolor> </big></bold> -->
 <form action="/html/tags/html_form_tag_action.cfm" method="post">
 <textarea name="comments" id="comments" style="width:55%;height:150px;padding:2%;font-size:1.2em;background:url('http://www.oneequalworld.com/wp-content/uploads/2017/02/shutterstock_201120113.jpg');">
-Enter your comments here...
+Cannot wait until Christmas! All these black friday deals have me so excited for it!
+Is anyone picking up anything good this Black friday?
 
-...and watch your comment box grow scrollbars!
 </textarea>
 <br>
 <input type="submit" value="Reply to Postcard">
@@ -159,12 +223,42 @@ Enter your comments here...
 <br>
 <br>
 <br>
-<big><bold> <font color ="black"> Luigi Mario<br> </fontcolor></big></bold>
+
+<!-- // this is the code for creating the Modal by Gerardo , version 1.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="container" style= "margin-left: 0px ; padding-left: 0px">
+<!-- PROTOTYPE add image to modal - NOT WORKING -   <a img src="http://4.bp.blogspot.com/-Kvlhjj4NAxg/TpaqHKTHMTI/AAAAAAAAACE/WgKno8HJEgk/s1600/monopoly_man-13539.jpg" </a>  -->
+   <a href="#" title=" Luigi Mario " data-toggle="popover" data-trigger="hover" data-content=" Last Logged in : 11/13/17 - Mutual Friends : 33">
+<big><bold> Luigi Mario </bold></big></a>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+</body>
+</html>
+
+
+<!-- <><><><<><><><>><><><>     COMMENTING OUT THE PREVIOUS STYLE OF NAMES TO SHOW NEW MODAL V.1.0
+<big> <bold> <font color ="black"> Luigi Mario <br> </fontcolor> </big></bold> -->
 <form action="/html/tags/html_form_tag_action.cfm" method="post">
 <textarea name="comments" id="comments" style="width:55%;height:150px;padding:2%;font-size:1.2em;background:url('http://www.oneequalworld.com/wp-content/uploads/2017/02/shutterstock_201120113.jpg');">
-Enter your comments here...
+Yesterday's Exam was a real bummer! I hope the professor gives us extra credit!
+#Hopeful
 
-...and watch your comment box grow scrollbars!
 </textarea>
 <br>
 <input type="submit" value="Reply to Postcard">

@@ -1,27 +1,60 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
-    <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
-    <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout">Logout</a>
-    <router-link v-else to="/login">Login</router-link>
-    <h1>{{ title }}</h1>
-    <hr />
-    <router-view />
+
+       <br>
+       <br>
+       <br>
+
+        <div class="container  bg-light">
+
+                 <!-- <hr>
+                <router-link to="/">Home</router-link>
+                <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
+                <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout">Logout</a>
+                <router-link v-else to="/login">Login</router-link>
+                <h1>{{ title }}</h1>
+                <hr /> -->
+                <router-view />
+
+
+        </div>
+
+
+      <div class="">
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+
+
   </div>
+
 </template>
 
 <script>
 export default {
   name: 'app',
+  // data:
+  // {
+  //   showContent:true,
+  // },
   data () {
     return {
-      title: 'Toro--Net'
+      title: 'Toro--Net',
+
     }
   },
   methods: {
     logout() {
       this.$store.dispatch('logout')
-    }
+    },
+    hpStaus(){
+      // showNav=false;
+      console.log(this.$store);
+
+    },
   },
   mounted() {
     this.$store.dispatch('getUser')
