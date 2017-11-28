@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="container bg-light" id="contentDiv" v-if="">
+    <div class="container bg-light" id="contentDiv" >
       <div class="row">
           <!-- display information on home page -->
           <div class="col-sm-0 col-lg-8">

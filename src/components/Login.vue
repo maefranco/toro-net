@@ -1,6 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container col-sm-4 align-items-center">
     <form action="/auth/local" method="post">
+      <div class="">
+         <h2>Log In!</h2>
+      </div>
+      <hr>
+      <br>
       <div class="form-group">
         <input class="form-control" type="email" name="email" placeholder="Email" v-model="email">
         </div>
@@ -11,7 +16,7 @@
     </form>
     <h4 class="mx-auto">OR<h4>
     <a href="/auth/github" class="btn btn-github">
-      <i class="fa fa-github"></i> Login with-Github
+      <i class="fa fa-github"></i> Login with Github
     </a>
   </div>
 </template>
