@@ -28,6 +28,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('getUser')
+    console.log(this.$store.state)
   }
 }
 </script>
