@@ -11,15 +11,22 @@
     </div>
     <button class="btn btn-primary" @click="addPost()">Post!</button>
     <hr>
+    <tree></tree>
   </div>
+  
   <div class="container" v-else>
     <h4>You must login to access Toro-Net!</h4> //changes made here
   </div>
 </template>
 
 <script>
+import tree from './Tree.vue';
+
 export default {
   name: 'Home',
+  components: {
+    tree,
+  },
   data() {
     return {
       // date: Date.now(),

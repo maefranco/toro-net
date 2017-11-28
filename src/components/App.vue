@@ -18,6 +18,9 @@ export default {
       title: 'Toro--Net'
     }
   },
+  computed: {
+    
+  },
   methods: {
     logout() {
       this.$store.dispatch('logout')
