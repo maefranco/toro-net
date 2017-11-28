@@ -20,22 +20,6 @@
 
 
 
-  document.querySelector('button').addEventListener('click', function() {
-  document.querySelector('#content').style.height= 'auto';
-  this.style.display= 'none';
-});
-
-body {
-  font: 14px verdana;
-}
-
-#content {
-  overflow: hidden;
-  height: 3.6em;
-  line-height: 1.2em;
-  width: 200px;
-}
-
 <div id="content">
 This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
 <button>Read more</button>
@@ -99,3 +83,29 @@ export default {
   },
 }
 </script>
+
+<!--
+<textarea>
+
+document.querySelector('button').addEventListener('click', function() {
+document.querySelector('#content').style.height= 'auto';
+this.style.display= 'none';
+});
+
+body {
+font: 14px verdana;
+}
+
+#content {
+overflow: hidden;
+height: 3.6em;
+line-height: 1.2em;
+width: 200px;
+}
+
+<div id="content">
+This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
+<button>Read more</button>
+
+<textarea>
+-->
