@@ -43,21 +43,22 @@ export default {
   data () {
     return {
       title: 'Toro--Net',
-
     }
+  },
+  computed: {
+
   },
   methods: {
     logout() {
       this.$store.dispatch('logout')
     },
-    hpStaus(){
-      // showNav=false;
-      console.log(this.$store);
-
-    },
+    register() {
+       location.reload();
+    }
   },
   mounted() {
     this.$store.dispatch('getUser')
+    console.log(this.$store.state)
   }
 }
 </script>

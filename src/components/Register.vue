@@ -72,6 +72,8 @@ export default {
         passwordConf: this.passwordConf,
       }
       this.$store.dispatch('register', newUser)
+      this.$router.push('/login');
+      location.reload();  //remove this in future build
     }
   }
 }
