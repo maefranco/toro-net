@@ -54,3 +54,14 @@ Run the backend using nodemon
 ```
 
 Open http://localhost:3000 in any web browser.
+
+
+*********************************************************************************************************************************
+
+# Midterm Contribution
+
+## The milestone diagram
+The [milestone](./images/milestone.jpeg) diagram.
+
+
+

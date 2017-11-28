@@ -15,8 +15,11 @@ export default {
   name: 'app',
   data () {
     return {
-      title: 'Toro--Net'
+      title: 'Toro--Net',
     }
+  },
+  computed: {
+    
   },
   methods: {
     logout() {
@@ -25,6 +28,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('getUser')
+    console.log(this.$store.state)
   }
 }
 </script>
