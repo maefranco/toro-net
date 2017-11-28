@@ -10,11 +10,16 @@ const state = {
   counts: {
     count: -1
   },
-  posts: {}
+  posts: {},
+  friendpath:[]
 }
 
 export default new Vuex.Store({
   state,
   mutations,
   actions
+  /*,
+  getters: {
+    friendpath: state => state.friendpath
+  }*/
 })

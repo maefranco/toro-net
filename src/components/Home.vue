@@ -11,7 +11,9 @@
     </div>
     <button class="btn btn-primary" @click="addPost()">Post!</button>
     <hr>
-    <tree></tree>
+    <!-- Example friend list insertion -->
+    <h3>Friend Tree</h3>
+    <tree :friendpath="friendpath"></tree>
   </div>
   
   <div class="container" v-else>
@@ -40,6 +42,12 @@ export default {
       title: '',
       body: ''
     };
+  },
+  computed: {
+    friendpath: function()
+    {
+      // return this.$store.state.getter.friendpath;
+    }
   },
   methods: {
     addPost() {
