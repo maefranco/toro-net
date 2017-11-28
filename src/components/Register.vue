@@ -8,7 +8,9 @@
         <input type="text" class="form-control" name="username" placeholder="Username" v-model="username">
       </div>
       <div class="form-group">
-       <input type="text" class="form-control" name="email" placeholder="Email" v-model="email">
+        <!-- <label      class="control-label" for="email">Email</label> -->
+       <input type="text" v-validate="email" data-rules="required|email" class="form-control" name="email" placeholder="Email" v-model="email">
+
       </div>
       <div class="form-group">
         <input type="password" class="form-control" name="password" placeholder="Password" v-model="password">
@@ -21,6 +23,19 @@
     </div>
 
 </template>
+
+<style>
+.container form{
+
+    witdth:200px;
+
+
+
+}
+
+
+
+</style>
 
 <script>
 export default {
@@ -43,7 +58,7 @@ export default {
         password: this.password,
         passwordConf: this.passwordConf,
       }
-      this.$store.dispatch('register', newUser)      
+      this.$store.dispatch('register', newUser)
     }
   }
 }

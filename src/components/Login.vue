@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <form action="/auth/local" method="post" >
+    <form action="/auth/local" method="post">
       <div class="form-group">
         <input class="form-control" type="email" name="email" placeholder="Email" v-model="email">
         </div>
         <div class="form-group">
         <input type="password" class="form-control" id="password" name="password" placeholder="Password" v-model="password">
         </div>
-        <button class="btn btn-success" type="submit">Login</button>
+        <button class="btn btn-success" @click="login" type="submit">Login</button>
     </form>
     <h4 class="mx-auto">OR<h4>
     <a href="/auth/github" class="btn btn-github">
