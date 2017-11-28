@@ -1,19 +1,28 @@
-<template>
-  <div id="app">
+<template >
+  <div id="app" >
 
        <br>
        <br>
        <br>
 
-        <div class="container  bg-light">
+        <div class="container ">
 
                  <!-- <hr>
                 <router-link to="/">Home</router-link>
                 <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
-                <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout">Logout</a>
+
                 <router-link v-else to="/login">Login</router-link>
                 <h1>{{ title }}</h1>
                 <hr /> -->
+                <div class="row" v-if="this.$store.state.user.displayName">
+                  <!-- <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout"><button class="btn btn-danger" type="button" name="button">Logout</button></a> -->
+                  <Navbar-loggedin>  </Navbar-loggedin>
+                </div>
+              <div class="">
+                <br>
+                <hr>
+                <br>
+              </div>
                 <router-view />
 
 

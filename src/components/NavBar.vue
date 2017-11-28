@@ -29,9 +29,7 @@
              <li class="nav-item">
                <a class="nav-link" href="/login"v-on:click="showNav=false"  > <span class="fa fa-sign-in"></span> Login </a>
              </li>
-             <li class="nav-item">
-               <a class="nav-link" href="/login"v-on:click="showNav=false"  > <span class="fa fa-sign-in"></span> Disabled </a>
-             </li>
+
 
 
            </ul>

@@ -15,11 +15,14 @@ import Register from './components/Register.vue'
 import Navbar from './components/NavBar.vue'
 import HpContent from './components/HPContent.vue'
 import Footer from './components/Footer.vue'
+import Navbarloggedin from './components/NavBarLoggedin.vue'
 
 
 Vue.component('nav-bar', Navbar);
 Vue.component('hp-content', HpContent);
 Vue.component('footer-area', Footer);
+Vue.component('Navbar-loggedin', Navbarloggedin);
+
 
 
 const router = new VueRouter({
