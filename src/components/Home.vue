@@ -16,7 +16,13 @@
           <textarea class="form-control" id="body" rows="5" placeholder="Please post here!" v-model="body"></textarea>
         </div>
 
-        <button class="btn btn-primary" @click="addPost()">Post!</button> 
+        <!--
+        <div id="content">
+        This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
+        <button>Read more</button>
+        -->
+
+        <button class="btn btn-primary" @click="addPost()">Post!</button>
       </div>
 
       <div class="col-xs-6 col-md-push-2">
@@ -27,17 +33,30 @@
             <h3>Friend Tree</h3>
             <tree :friendpath="friendpath"></tree>
           </div>
-        </div> 
-         
+        </div>
+
       </div>
 
         <!--/sidebar-nav-fixed -->
     </div>
-  
+
 </div>
 
 <div class="container" v-else>
-  <h4>You must login to access Toro-Net!</h4> //changes made here
+  <!-- <h4>
+                  <h1>WHAT IS GOING ON? </h1>
+  </h4> -->
+  <!-- navbar loaded -->
+    <nav-bar> </nav-bar>
+
+    <!--Home page content loaded  -->
+    <hp-content> </hp-content>
+
+    <hr>
+
+    <!-- footer loaded  -->
+    <footer-area> </footer-area>
+
 </div>
 
 
@@ -85,29 +104,32 @@ export default {
 }
 </script>
 
-<style>
-@media (min-width: 992px) {
-  .container-scroll {
-    overflow-x: auto;
-  }
-  .container-scroll .columns-16 {
-    width: 133.33333333vw;  /* = 100vw * 16/12 */
-  }
-  .container-scroll .columns-24 {
-    width: 200vw;  /* = 100vw * 24/12 */
-  }
-  .container-scroll .col-md-2 {
-    width: 16.66666667vw !important;
-  }
+<!--
+<textarea>
+
+document.querySelector('button').addEventListener('click', function() {
+document.querySelector('#content').style.height= 'auto';
+this.style.display= 'none';
+});
+
+body {
+font: 14px verdana;
 }
 
-.container-scroll > .row {
-  margin-top: 24px;
+#content {
+overflow: hidden;
+height: 3.6em;
+line-height: 1.2em;
+width: 200px;
 }
-.container-scroll > .row > .col-md-2 {
-  font-weight: bold;
-  text-align: center;
-}
+
+<!--
+<div id="content">
+This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
+<button>Read more</button>
+
+<textarea>
+-->
 
 .demo-content{
        padding: 15px;
