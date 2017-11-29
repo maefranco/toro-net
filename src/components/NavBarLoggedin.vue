@@ -18,6 +18,14 @@
             <a class="nav-link" href="/"  ><span class="fa fa-home"></span> Home <span class="sr-only">(current)</span></a>
           </li>
 
+          <!-- settings button  -->
+         <li class="nav-item ">
+           <!-- <a class="nav-link" href="/login"v-on:click="showNav=false"  > <span class="fa fa-sign-in"></span> Login </a> -->
+           <!-- <a v-if="this.$store.state.user.displayName" href="#" @click=""><button class="btn" type="button" name="Settings-button">Settings</button></a> -->
+           <a class="nav-link" href="#"  ><span class="fa fa-cog"></span> Settings <span class="sr-only">(current)</span></a>
+
+         </li>
+
               <p>   </p>
            <!-- log out button  -->
           <li class="nav-item align-item-right">

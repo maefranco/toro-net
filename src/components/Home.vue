@@ -18,14 +18,18 @@
                           <div class="form-group">
                             <textarea class="form-control" id="body" rows="this.textareaHeight" style="overflow:hidden"  placeholder="Write your thoughts here..." v-on:click="expandTextarea()" v-model="body">
                             </textarea>
-                            <p>WARNING...{{body}}...</p>
+                            <!-- <p>WARNING...{{body}}...</p> -->
                           </div>
                         <button class="btn btn-primary" @click="addPost()">Post!</button>
                     <hr>
               </div>
 
             <div class=" col-sm-6">
+                  <!-- <div class="sidebar-nav-fixed affix">
+                    <div class="demo-content bg-alt">Tree</div>
 
+                  </div> -->
+                  <!-- <h1>TREEEEEEE</h1> -->
             </div>
     </div>
 
@@ -114,3 +118,41 @@ export default {
 // }
 // expandTextarea('body');
  </script>
+
+ <style>
+@media (min-width: 992px) {
+  .container-scroll {
+    overflow-x: auto;
+  }
+  .container-scroll .columns-16 {
+    width: 133.33333333vw;  /* = 100vw * 16/12 */
+  }
+  .container-scroll .columns-24 {
+    width: 200vw;  /* = 100vw * 24/12 */
+  }
+  .container-scroll .col-md-2 {
+    width: 16.66666667vw !important;
+  }
+}
+.container-scroll > .row {
+  margin-top: 24px;
+}
+.container-scroll > .row > .col-md-2 {
+  font-weight: bold;
+  text-align: center;
+}
+.demo-content{
+       padding: 15px;
+       font-size: 18px;
+       min-height: 400px;
+       min-width: 350px;
+       background: #dbdfe5
+;
+       margin-bottom: 10px;
+   }
+   .demo-content.bg-alt{
+       background: #778899
+
+;
+   }
+</style>
