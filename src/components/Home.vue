@@ -30,6 +30,7 @@
 
                   </div> -->
                   <!-- <h1>TREEEEEEE</h1> -->
+                  <tree ref="tree"></tree>
             </div>
     </div>
 
@@ -64,8 +65,13 @@
 </style>
 
 <script>
+import tree from './Tree.vue';
+
 export default {
   name: 'Home',
+  components: {
+    tree,
+  },
   data:{
     textareaHeight:50
   },

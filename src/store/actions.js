@@ -86,3 +86,14 @@ export const getPosts = ({commit}) => {
     console.log(error);
   });
 }
+
+export const getTree = ({commit}) => {
+  axios.get('/tree')
+  .then(function (response) {
+    console.log('Retrieved relations tree: ', response.data);
+    commit(types.GET_TREE, response.data)
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
