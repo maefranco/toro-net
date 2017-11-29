@@ -72,9 +72,7 @@ export default {
   components: {
     tree,
   },
-  data:{
-    textareaHeight:50
-  },
+
   data() {
     return {
       // date: Date.now(),
@@ -99,31 +97,12 @@ export default {
     this.$store.dispatch('getPosts')
     this.$store.dispatch('getUser')
   },
- expandTextarea() {
-    // this.addEventListener('keyup', function () {
-    //   this.style.overflow='hidden';
-    //   this.style.height=0;
-      this.style.height=this.scrollHeight+1;
 
-    // }, false);
-
-  }
   // expandTextarea('body')
 }
 </script>
 
- <script type="text/javascript">
-// function expandTextarea(id) {
-//   document.getElementById('id').addEventListener('keyup', function () {
-//     this.style.overflow='hidden';
-//     this.style.height=0;
-//     this.style.height=this.scrollHeight+'px';
-//
-//   }, false);
-//
-// }
-// expandTextarea('body');
- </script>
+
 
  <style>
 @media (min-width: 992px) {

@@ -5,8 +5,8 @@
           <!-- display information on home page -->
           <div class="col-sm-0 col-lg-8">
               <br>
-            <div class="row offset-sm-2">
-                 <h2>Connect with friends from CSUDH. </h2>
+            <div class="row offset-sm-2" id="">
+                 <h2 class="content-title-h2">Connect with friends from CSUDH. </h2>
             </div>
             <br>
             <div class="row offset-sm-1">
@@ -14,7 +14,7 @@
             </div>
             <br>
             <div class="row offset-sm-1">
-              <p> <span class="fa fa-share-alt-square fa-3x"></span>  Share what's new in your life.</p>
+              <p> <span class="fa fa-share-alt-square fa-3x"></span>   Share what's new in your life.</p>
             </div>
             <br>
             <div class="row offset-sm-1">
@@ -147,7 +147,15 @@
 
 <style scoped>
 </style>
+.content-title-h2{
+  font-family: Arial Black;
+	font-size: 30px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 33px;
 
+}
 
 
 <script>
