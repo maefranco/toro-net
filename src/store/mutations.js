@@ -21,5 +21,8 @@ export const mutations = {
   },
   [types.ADD_POST] (state, posts_payload) {
     state.posts = posts_payload
-  }
+  },
+  [types.GET_TREE] (state,tree_payload) {
+    state.friendpath = tree_payload
+  },
 }
