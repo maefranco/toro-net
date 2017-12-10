@@ -18,11 +18,19 @@
                          <h5>Our Address</h5>
                          <address>
                        1000 E Victoria St<br>
+<<<<<<< HEAD
+                       Carson, CA 90747  US <br>
+
+                       <i class="fa fa-phone fa-lg"></i>: +1 310 243 3696<br>
+                       <i class="fa fa-fax fa-lg"></i>: +1 310 243 3696<br>
+                       <!-- <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:awang26@toromail.csudh.edu">Email Us</a> <br> -->
+=======
                        Carson, CA 90747<br>
                        United States<br>
                        <i class="fa fa-phone fa-lg"></i>: +1 310 243 3696<br>
                        <i class="fa fa-fax fa-lg"></i>: +1 310 243 3696<br>
                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:awang26@toromail.csudh.edu">Email Us</a> <br>
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
                     </address>
                      </div>
                      <div class="col-sm align-self-center">

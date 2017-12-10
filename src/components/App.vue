@@ -1,19 +1,44 @@
+<<<<<<< HEAD
+<template >
+  <div id="app" >
+=======
 <template>
   <div id="app">
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
 
        <br>
        <br>
        <br>
 
+<<<<<<< HEAD
+        <div class="container ">
+=======
         <div class="container  bg-light">
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
 
                  <!-- <hr>
                 <router-link to="/">Home</router-link>
                 <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
+<<<<<<< HEAD
+
+                <router-link v-else to="/login">Login</router-link>
+                <h1>{{ title }}</h1>
+                <hr /> -->
+                <div class="row" v-if="this.$store.state.user.displayName">
+                  <!-- <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout"><button class="btn btn-danger" type="button" name="button">Logout</button></a> -->
+                  <Navbar-loggedin>  </Navbar-loggedin>
+                </div>
+              <div class="">
+                <br>
+                <hr>
+                <br>
+              </div>
+=======
                 <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout">Logout</a>
                 <router-link v-else to="/login">Login</router-link>
                 <h1>{{ title }}</h1>
                 <hr /> -->
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
                 <router-view />
 
 
@@ -43,6 +68,10 @@ export default {
   data () {
     return {
       title: 'Toro--Net',
+<<<<<<< HEAD
+
+=======
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
     }
   },
   computed: {
@@ -52,9 +81,17 @@ export default {
     logout() {
       this.$store.dispatch('logout')
     },
+<<<<<<< HEAD
+    hpStaus(){
+      // showNav=false;
+      console.log(this.$store);
+
+    },
+=======
     register() {
        location.reload();
     }
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
   },
   mounted() {
     this.$store.dispatch('getUser')

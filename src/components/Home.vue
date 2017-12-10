@@ -1,68 +1,68 @@
 <template>
-<div>
 
-<div class="container" v-if="this.$store.state.user.displayName">
-  <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4>
-  <br>
+  <!-- if logged in -->
+  <div class="container" v-if="this.$store.state.user.displayName">
+    <h5>Welcome {{this.$store.state.user.displayName}}! What's happening?</h5>
     <div class="row">
 
-      <div class="col-xs-6 col-xs-6 col-md-push-1">
+              <!-- <div class="col-sm-6">
 
-        <div class="form-group">
-          <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
-        </div>
+              </div> -->
 
-        <div class="form-group">
-          <textarea class="form-control" id="body" rows="5" placeholder="Please post here!" v-model="body"></textarea>
-        </div>
+              <div class=" col-sm-6">
+                    <!-- <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4> -->
+                    <br>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+                        </div>
+                          <div class="form-group">
+                            <textarea class="form-control" id="body" rows="this.textareaHeight" style="overflow:hidden"  placeholder="Write your thoughts here..." v-on:click="expandTextarea()" v-model="body">
+                            </textarea>
+                            <!-- <p>WARNING...{{body}}...</p> -->
+                          </div>
+                        <button class="btn btn-primary" @click="addPost()">Post!</button>
+                    <hr>
+              </div>
 
-        <!--
-        <div id="content">
-        This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
-        <button>Read more</button>
-        -->
+            <div class=" col-sm-6">
+                  <!-- <div class="sidebar-nav-fixed affix">
+                    <div class="demo-content bg-alt">Tree</div>
 
-        <button class="btn btn-primary" @click="addPost()">Post!</button>
-      </div>
-
-      <div class="col-xs-6 col-md-push-2">
-
-        <div class="sidebar-nav-fixed affix">
-          <div class="demo-content bg-alt">
-            <!-- Example friend list insertion -->
-            <h3>Friend Tree</h3>
-            <tree :friendpath="friendpath"></tree>
-          </div>
-        </div>
-
-      </div>
-
-        <!--/sidebar-nav-fixed -->
+                  </div> -->
+                  <!-- <h1>TREEEEEEE</h1> -->
+                  <tree ref="tree"></tree>
+            </div>
     </div>
 
 </div>
 
-<div class="container" v-else>
-  <!-- <h4>
-                  <h1>WHAT IS GOING ON? </h1>
-  </h4> -->
-  <!-- navbar loaded -->
-    <nav-bar> </nav-bar>
+  <!-- if not logged in -->
+  <div class="container" v-else>
 
-    <!--Home page content loaded  -->
-    <hp-content> </hp-content>
+    <!-- navbar loaded -->
+      <nav-bar> </nav-bar>
 
-    <hr>
+      <!--Home page content loaded  -->
+      <hp-content> </hp-content>
 
-    <!-- footer loaded  -->
-    <footer-area> </footer-area>
+      <hr>
 
-</div>
+      <!-- footer loaded  -->
+      <footer-area> </footer-area>
 
-
-</div>
+  </div>
 </template>
 
+<style>
+ .info_section{
+
+    width: 600;
+    height: 400;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+ }
+</style>
 
 <script>
 import tree from './Tree.vue';
@@ -72,6 +72,7 @@ export default {
   components: {
     tree,
   },
+
   data() {
     return {
       // date: Date.now(),
@@ -83,7 +84,8 @@ export default {
       // than is probably necessary... $store is accessible globally
       // throughout the app after all.
       title: '',
-      body: ''
+      body: '',
+
     };
   },
   computed: {
@@ -101,36 +103,35 @@ export default {
     this.$store.dispatch('getPosts')
     this.$store.dispatch('getUser')
   },
+
+  // expandTextarea('body')
 }
 </script>
 
-<!--
-<textarea>
 
-document.querySelector('button').addEventListener('click', function() {
-document.querySelector('#content').style.height= 'auto';
-this.style.display= 'none';
-});
 
-body {
-font: 14px verdana;
+ <style>
+@media (min-width: 992px) {
+  .container-scroll {
+    overflow-x: auto;
+  }
+  .container-scroll .columns-16 {
+    width: 133.33333333vw;  /* = 100vw * 16/12 */
+  }
+  .container-scroll .columns-24 {
+    width: 200vw;  /* = 100vw * 24/12 */
+  }
+  .container-scroll .col-md-2 {
+    width: 16.66666667vw !important;
+  }
 }
-
-#content {
-overflow: hidden;
-height: 3.6em;
-line-height: 1.2em;
-width: 200px;
+.container-scroll > .row {
+  margin-top: 24px;
 }
-
-<!--
-<div id="content">
-This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
-<button>Read more</button>
-
-<textarea>
--->
-
+.container-scroll > .row > .col-md-2 {
+  font-weight: bold;
+  text-align: center;
+}
 .demo-content{
        padding: 15px;
        font-size: 18px;
@@ -142,8 +143,7 @@ This is the first post attempt. it is in the works! abcdefghijklmnopqrstuvwxyz a
    }
    .demo-content.bg-alt{
        background: #778899
+
 ;
    }
-
-
 </style>
