@@ -1,75 +1,78 @@
 <template>
+
+  <!-- if logged in -->
   <div class="container" v-if="this.$store.state.user.displayName">
-    <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4>
-    <br>
+    <h5>Welcome {{this.$store.state.user.displayName}}! What's happening?</h5>
+    <div class="row">
 
+              <!-- <div class="col-sm-6">
 
-    <div class = "container">
-            <div class="row">
+              </div> -->
 
-                    <div class="col-xs-6 col-xs-6 col-md-push-1">
+              <div class=" col-sm-6">
+                    <!-- <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4> -->
+                    <br>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+                        </div>
                           <div class="form-group">
-                            <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+                            <textarea class="form-control" id="body" rows="this.textareaHeight" style="overflow:hidden"  placeholder="Write your thoughts here..." v-on:click="expandTextarea()" v-model="body">
+                            </textarea>
+                            <!-- <p>WARNING...{{body}}...</p> -->
                           </div>
+                        <button class="btn btn-primary" @click="addPost()">Post!</button>
+                    <hr>
+              </div>
 
-                            <div class="form-group">
-                              <textarea class="form-control" id="body" rows="5" placeholder="Please post here!" v-model="body">
-                              </textarea>
-                            </div>
-                            <button class="btn btn-primary" @click="addPost()">Post!</button>
-                    </div>
+            <div class=" col-sm-6">
+                  <!-- <div class="sidebar-nav-fixed affix">
+                    <div class="demo-content bg-alt">Tree</div>
 
-                            <div class="col-xs-6 col-md-push-2">
-                                     <div class="sidebar-nav-fixed affix">
-                                            <div class="demo-content bg-alt">.col-sm-6</span></div>
-                                         </div>
-                                        <!--/sidebar-nav-fixed -->
-                          </div>
-                </div>
-      </div>
+                  </div> -->
+                  <!-- <h1>TREEEEEEE</h1> -->
+                  <tree ref="tree"></tree>
+            </div>
+    </div>
 
-<br>
-
-              <div class="row">
-
-               <div class="col-xs-6 col-xs-6 col-md-push-1">
-               <div class="form-group">
-                 <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
-               </div>
-               <div class="form-group">
-                 <textarea class="form-control" id="body" rows="5" placeholder="Please post here!" v-model="body">
-                 </textarea>
-               </div>
-               <button class="btn btn-primary" @click="addPost()">Post!</button></div>
 </div>
 
-<br>
-
-<div class="row">
-
- <div class="col-xs-6 col-xs-6 col-md-push-1">
- <div class="form-group">
-   <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
- </div>
- <div class="form-group">
-   <textarea class="form-control" id="body" rows="5" placeholder="Please post here!" v-model="body">
-   </textarea>
- </div>
- <button class="btn btn-primary" @click="addPost()">Post!</button></div>
-</div>
-
-
+  <!-- if not logged in -->
   <div class="container" v-else>
-    <h4>You must login to access Toro-Net!</h4> //changes made here
+
+    <!-- navbar loaded -->
+      <nav-bar> </nav-bar>
+
+      <!--Home page content loaded  -->
+      <hp-content> </hp-content>
+
+      <hr>
+
+      <!-- footer loaded  -->
+      <footer-area> </footer-area>
+
   </div>
-
-
-</div>
 </template>
 
+<style>
+ .info_section{
+
+    width: 600;
+    height: 400;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+ }
+</style>
+
 <script>
+import tree from './Tree.vue';
+
 export default {
   name: 'Home',
+  components: {
+    tree,
+  },
+
   data() {
     return {
       // date: Date.now(),
@@ -81,8 +84,15 @@ export default {
       // than is probably necessary... $store is accessible globally
       // throughout the app after all.
       title: '',
-      body: ''
+      body: '',
+
     };
+  },
+  computed: {
+    friendpath: function()
+    {
+      // return this.$store.state.getter.friendpath;
+    }
   },
   methods: {
     addPost() {
@@ -93,10 +103,14 @@ export default {
     this.$store.dispatch('getPosts')
     this.$store.dispatch('getUser')
   },
+
+  // expandTextarea('body')
 }
 </script>
 
-<style>
+
+
+ <style>
 @media (min-width: 992px) {
   .container-scroll {
     overflow-x: auto;
@@ -111,7 +125,6 @@ export default {
     width: 16.66666667vw !important;
   }
 }
-
 .container-scroll > .row {
   margin-top: 24px;
 }
@@ -119,7 +132,6 @@ export default {
   font-weight: bold;
   text-align: center;
 }
-
 .demo-content{
        padding: 15px;
        font-size: 18px;
@@ -131,8 +143,7 @@ export default {
    }
    .demo-content.bg-alt{
        background: #778899
+
 ;
    }
-
-
 </style>
