@@ -1,12 +1,21 @@
 <template>
   <div class="container">
+<<<<<<< HEAD
     <div class="container" id="contentDiv" >
+=======
+    <div class="container bg-light" id="contentDiv" >
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
       <div class="row">
           <!-- display information on home page -->
           <div class="col-sm-0 col-lg-8">
               <br>
+<<<<<<< HEAD
             <div class="row offset-sm-2" id="">
                  <h2 class="content-title-h2">Connect with friends from CSUDH. </h2>
+=======
+            <div class="row offset-sm-2">
+                 <h2>Connect with friends from CSUDH. </h2>
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
             </div>
             <br>
             <div class="row offset-sm-1">
@@ -14,7 +23,11 @@
             </div>
             <br>
             <div class="row offset-sm-1">
+<<<<<<< HEAD
               <p> <span class="fa fa-share-alt-square fa-3x"></span>   Share what's new in your life.</p>
+=======
+              <p> <span class="fa fa-share-alt-square fa-3x"></span>  Share what's new in your life.</p>
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
             </div>
             <br>
             <div class="row offset-sm-1">
@@ -147,6 +160,7 @@
 
 <style scoped>
 </style>
+<<<<<<< HEAD
 .content-title-h2{
   font-family: Arial Black;
 	font-size: 30px;
@@ -156,6 +170,9 @@
 	line-height: 33px;
 
 }
+=======
+
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
 
 
 <script>

@@ -88,6 +88,12 @@ export default {
 
     };
   },
+  computed: {
+    friendpath: function()
+    {
+      // return this.$store.state.getter.friendpath;
+    }
+  },
   methods: {
     addPost() {
       this.$store.dispatch('addPost', this.$store.state.posts)

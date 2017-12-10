@@ -7,8 +7,11 @@
 </template>
 <script>
 /* eslint-disable */
+<<<<<<< HEAD
 
 /*once friend node clicked on in Home.vue must call GetTree*/
+=======
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
   export default {
     data() {
       return { 
@@ -19,12 +22,15 @@
       }
     },
     props:['friendpath'],
+<<<<<<< HEAD
     computed: {
       friendpath: function()
       {
         return this.$store.state.friendpath;
       }
   },
+=======
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
     methods: {
       init()
       { 
@@ -36,7 +42,11 @@
       },
       GetTree(tree)
       {
+<<<<<<< HEAD
         this.obj = friendpath;
+=======
+        this.obj = tree;
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
         this.target = this.obj[this.obj.length-1].name;
         this.buildDivTree(this.obj);
       },
@@ -70,11 +80,15 @@
 {
     width: 70%;
     margin: auto;
+<<<<<<< HEAD
     text-align: center; 
     /*
     position: -webkit-sticky;
     position: sticky;
     */       
+=======
+    text-align: center;        
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
 }
 .node 
 {

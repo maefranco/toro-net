@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template >
     <div class="container col-sm-4 align-items-center ">
 
@@ -83,6 +84,41 @@
             <a href="#">Cookie Use</a>
             . You may receive SMS Notifications from Toro-Net and can opt out at any time.
           </div>
+=======
+<template>
+
+
+
+    <div class="container col-sm-6 align-items-center">
+      <form action="/users" method="post" >
+            <div class="">
+               <h2>Sign Up Now!</h2>
+            </div>
+            <hr>
+            <div class="form-group">
+              <input type="text" class="form-control" name="displayName" placeholder="Display name" v-model="displayName">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" name="username" placeholder="Username" v-model="username">
+            </div>
+
+            <div class="form-group">
+              <!-- <label      class="control-label" for="email">Email</label> -->
+             <input type="text" v-validate="email" data-rules="required|email" class="form-control" name="email" placeholder="Email" v-model="email">
+
+            </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" v-model="password">
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" name="passwordConf" placeholder="Confirm password" v-model="passwordConf">
+          </div>
+
+          <button class="btn btn-success" type="submit" >Register</button>
+>>>>>>> 955475abb5d9cf7eb5ab4be8d62ac43d72bcc0f0
 
       </form>
     </div>
@@ -196,6 +232,8 @@ export default {
         passwordConf: this.passwordConf,
       }
       this.$store.dispatch('register', newUser)
+      this.$router.push('/login');
+      location.reload();  //remove this in future build
     }
   }
 }
